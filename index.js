@@ -4,5 +4,5 @@ const app = express();
 
 const port = process.env.PORT || 4000
 
-app.get("/", (req, res) => res.send(`Listening on: ${port}`))
-app.listen(port)
+app.listen(port, console.log(`This is the port ${port}`));
+//app.get("/", (req, res) => res.send("hello"))
