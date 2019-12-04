@@ -9,4 +9,10 @@ router.get("/team", (req, res, next) => {
     .catch(error => next(error));
 });
 
+router.post("/team", (req, res) => {
+  Team.create(req.body)
+    .then(res)
+    .catch(err => next(err));
+});
+
 module.exports = router;
